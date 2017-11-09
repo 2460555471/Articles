@@ -31,7 +31,7 @@ class Network(object):
         self.num_layers = len(sizes)
         self.sizes = sizes
         # 除去输入层，随机产生每层中 y 个神经元的 biase 值（0 - 1）
-        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.biases = [np.random.randn(y, 1) for y in sizes[1:]] #这块像曾广矩阵一样
         # 随机产生每条连接线的 weight 值（0 - 1）
         self.weights = [np.random.randn(y, x)
                         for x, y in zip(sizes[:-1], sizes[1:])]
